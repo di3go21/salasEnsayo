@@ -1541,7 +1541,7 @@ section {
 }
 
 #footer .footer-top .social-links a {
-  font-size: 18px;
+  font-size: 50px;
   display: inline-block;
   background: #333;
   color: #eee;
@@ -1550,9 +1550,25 @@ section {
   margin-right: 4px;
   border-radius: 50%;
   text-align: center;
-  width: 36px;
-  height: 36px;
+  width: 70px;
+  height: 70px;
   transition: 0.3s;
+}
+@media (max-width: 600px) {
+  #footer .footer-top .social-links a {
+    font-size: 20px;
+    display: inline-block;
+    background: #333;
+    color: #eee;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    transition: 0.3s;
+  }
 }
 
 #footer .footer-top .social-links a:hover {
