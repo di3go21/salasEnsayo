@@ -1,7 +1,7 @@
 
   $('form').submit(function(e) {
     e.preventDefault();
-/*
+
     var nombreR=$("#name").val().trim();    
     if(nombreR=="") pintaRojo("#name"); else quitaRojo("#name");
     var asuntoR=$("#subject").val().trim();
@@ -13,17 +13,24 @@
     var postMsg={nombre:nombreR,asunto:asuntoR,email:emailR,mensaje:mensajeR};
     console.log(postMsg);
     if(nombreR!="" && asuntoR!="" && mensajeR!="" && emailR!="" )
-    $.post("http://ec2-15-236-90-41.eu-west-3.compute.amazonaws.com/form.php",postMsg,(data)=>{
-        $("form").fadeOut(1000,()=>{
-            $("#enviado").fadeIn(2000);
-        });
-        console.log(data)
-        
-    })
+    $.ajax({
+        url: "https://j982nbapid.execute-api.eu-west-1.amazonaws.com/produccionApi/emailform",
+        type:"POST",
+        data:postMsg,
+        contentType:"application/json; charset=utf-8",
+        dataType:"json",
+        crossDomain:true,
+        success: function(data){
+            $("form").fadeOut(1000,()=>{
+                $("#enviado").fadeIn(2000);
+            });
+            console.log(data)
+        }
+      });
 
 
 
- */
+ 
 
   });
   $("#enviado").hide();
