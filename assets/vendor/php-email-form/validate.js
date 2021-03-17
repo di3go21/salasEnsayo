@@ -1,7 +1,7 @@
 
   $('form').submit(function(e) {
     e.preventDefault();
-
+/*
     var nombreR=$("#name").val().trim();    
     if(nombreR=="") pintaRojo("#name"); else quitaRojo("#name");
     var asuntoR=$("#subject").val().trim();
@@ -23,7 +23,7 @@
 
 
 
-
+ */
 
   });
   $("#enviado").hide();
