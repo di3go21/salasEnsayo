@@ -14,7 +14,7 @@
     console.log(postMsg);
     if(nombreR!="" && asuntoR!="" && mensajeR!="" && emailR!="" )
     $.ajax({
-        url: "https://j982nbapid.execute-api.eu-west-1.amazonaws.com/produccionApi/emailform",
+        url: "https://j982nbapid.execute-api.eu-west-1.amazonaws.com/aaa/emailform",
         type:"POST",
         data:postMsg,
         contentType:"application/json; charset=utf-8",
