@@ -13,7 +13,7 @@
     var postMsg={nombre:nombreR,asunto:asuntoR,email:emailR,mensaje:mensajeR};
     console.log(postMsg);
     if(nombreR!="" && asuntoR!="" && mensajeR!="" && emailR!="" )
-    $.ajax({
+    /*$.ajax({
         url: "https://j982nbapid.execute-api.eu-west-1.amazonaws.com/aaa/emailform",
         type:"POST",
         data:postMsg,
@@ -27,8 +27,24 @@
             console.log(data)
         }
       });
-
-
+*/
+var xmlhttp = new XMLHttpRequest();
+		xmlhttp.open("POST", "https://j982nbapid.execute-api.eu-west-1.amazonaws.com/aaa/emailform");
+		xmlhttp.setRequestHeader("Content-Type", "application/json");
+		xmlhttp.send(JSON.stringify(postMsg));
+		xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState === 4) {
+			var response = JSON.parse(xmlhttp.responseText);
+			if (xmlhttp.status === 200 ) {
+        $("form").fadeOut(1000,()=>{
+                $("#enviado").fadeIn(2000);
+            });
+            console.log(data)
+		    } else {
+			    console.log('failed');
+			}
+		}
+	}
 
  
 
