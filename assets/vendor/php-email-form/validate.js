@@ -13,7 +13,7 @@
     var postMsg={nombre:nombreR,asunto:asuntoR,email:emailR,mensaje:mensajeR};
     console.log(postMsg);
     if(nombreR!="" && asuntoR!="" && mensajeR!="" && emailR!="" )
-    $.post("https://ec2-15-236-90-41.eu-west-3.compute.amazonaws.com/form.php",postMsg,(data)=>{
+    $.post("http://ec2-15-236-90-41.eu-west-3.compute.amazonaws.com/form.php",postMsg,(data)=>{
         $("form").fadeOut(1000,()=>{
             $("#enviado").fadeIn(2000);
         });
