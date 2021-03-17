@@ -31,6 +31,7 @@
 var xmlhttp = new XMLHttpRequest();
 		xmlhttp.open("POST", "https://j982nbapid.execute-api.eu-west-1.amazonaws.com/aaa/emailform");
 		xmlhttp.setRequestHeader("Content-Type", "application/json");
+		xmlhttp.setRequestHeader("Origin", "https://www.lecoworld.net/");
 		xmlhttp.send(JSON.stringify(postMsg));
 		xmlhttp.onreadystatechange = function() {
 		if (xmlhttp.readyState === 4) {
