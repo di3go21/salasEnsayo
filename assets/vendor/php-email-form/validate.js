@@ -29,7 +29,7 @@
       });
 */
 var xmlhttp = new XMLHttpRequest();
-		xmlhttp.open("POST", "https://j982nbapid.execute-api.eu-west-1.amazonaws.com/aaa/emailform");
+		xmlhttp.open("POST", "https://j982nbapid.execute-api.eu-west-1.amazonaws.com/bbbb/");
 		xmlhttp.setRequestHeader("Content-Type", "application/json");
 		xmlhttp.setRequestHeader("Origin", "https://www.lecoworld.net/");
 		xmlhttp.send(JSON.stringify(postMsg));
